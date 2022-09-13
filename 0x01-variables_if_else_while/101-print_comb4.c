@@ -18,6 +18,7 @@ int main(void)
 			{
 				if (digit1 != digit2 && digit2 > digit1)
 				{
+					putchar((digit0 % 10) + '0');
 					putchar((digit1 % 10) + '0');
 					putchar((digit2 % 10) + '0');
 				}
