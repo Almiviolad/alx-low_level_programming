@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
 *test-test function that printa if number is positive or negative
 *
@@ -8,8 +7,9 @@
 
 int test(void)
 {
-	int i = 0;
-	
+	int i;
+
+	i = 0;
 	positive_or_negative(i);
 	return (0);
 }
