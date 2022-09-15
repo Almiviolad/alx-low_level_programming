@@ -1,11 +1,15 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+#include "main.c"
 /**
-*test-test function that printa if number is positive or negative
+*main-test function that printa if number is positive or negative
 *
 * Return: 0
 */
 
-int test(void)
+int main(void)
 {
 	int i;
 
