@@ -2,8 +2,8 @@
 /**
  *_isdigit-tells if a character is digit or not
  *Description:to test if a char us digit
- *@c: character to be tested
- *Return:1(upper) or 0(not upper)
+ *@c:character to be tested
+ *Return:1(digit) or 0(digit)
  */
 int __isdigit(int c)
 {
