@@ -26,10 +26,10 @@ void print_triangle(int size)
 			{
 				_putchar('#');
 				s++;
-		     _putchar('\n');
+			}
+			_putchar('\n');
 			c++;
 		}
-	}
 	}
 	else
 		_putchar('\n');
