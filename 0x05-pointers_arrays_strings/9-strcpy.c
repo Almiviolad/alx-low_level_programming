@@ -1,4 +1,4 @@
-#include "main.h"s
+#include "main.h"
 #include <stdio.h>
 /**
  *_strcpy -main entry.
@@ -24,4 +24,4 @@ char *_strcpy(char *dest, char *src)
 
 	return (dest);
 
-}/x
+}
