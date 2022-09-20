@@ -14,13 +14,22 @@ void puts_half(char *str)
 		i++;
 	}
 	if (i % 2 == 0)
-		half = i / 2;
-	else
-		half = (i + 1) / 2;
-	while (j < half)
 	{
-		_putchar(str[j + half]);
-		j++;
+		half = i / 2;
+		while (j < half)
+		{
+			_putchar(str[j + half]);
+			j++;
+		}
+	}
+	else
+	{
+		half = (i + 1) / 2;
+		while (j < (half - 1))
+		{
+			_putchar(str[j + half]);
+			j++;
+		}
 	}
 	_putchar('\n');
 }
