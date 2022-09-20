@@ -1,20 +1,27 @@
-#include "main.h"
+#include "holberton.h"
+#include <stdio.h>
 /**
- *_strcpy - copies a string to another
- *@dest: the file to be copied into
- *@src: the source file to be copied from
- *Return: *dest(the destination file)
- */
+ *_strcpy -main entry.
+ *void: nothing
+ *@dest: char pointer
+ *@src: char pointer
+ *Description:copies the string pointed by src to the buffer pointed to by dest
+ * Return: void
+ **/
 char *_strcpy(char *dest, char *src)
 {
-	int index = 0;
 
-	while (src [index])
+	int c = 0;
+
+	while (src[c] != '\0')
 	{
-		dest[index] = src[index];
-		index++;
+		dest[c] = src[c];
+
+		c++;
 	}
-	dest[index + 1] = src[index+1];
+	dest[c] = src[c];
+
 
 	return (dest);
-}
+
+}/x
