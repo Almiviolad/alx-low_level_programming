@@ -7,17 +7,12 @@
  */
 void print_array(int *a, int n)
 {
-	int i = 0;
-
-	while (i < n)
+	int c;
+	for (c = 0; c < n - 1; c++)
 	{
-		printf("%d", a[i]);
-		if (i != (n - 1))
-		{
-			_putchar(',');
-			_putchar(' ');
-		}
-		i++;
+		printf("%d, ", a[c]);
 	}
+	if (c == n - 1)
+		printf("%d", a[c]);
 	_putchar('\n');
 }
