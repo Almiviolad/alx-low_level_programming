@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"s
 #include <stdio.h>
 /**
  *_strcpy -main entry.
