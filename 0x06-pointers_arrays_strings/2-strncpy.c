@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  *_strncpy - copies a number of string
  *@dest:the string variable to be copied
@@ -11,10 +12,14 @@ char *_strncpy(char *dest, char *src, int n)
 
 	i = 0;
 	j = 0;
-	while ((src[i] != '\0') && (i < n))
+	while (src[i] && (i < n))
 	{
 		dest[i] = src[i];
 		i++;
+	}
+	for (i = j; j < n; j++)
+	{
+		dest[j] = '\0';
 	}
 	return (dest);
 }
