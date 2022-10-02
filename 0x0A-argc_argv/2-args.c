@@ -1,0 +1,17 @@
+#include <stdio.h>
+/**
+ *main - entry point
+ *@argc: number of arguments
+ *@argv: array containg the argumnes
+ *Return: always 0(sucess)
+ */
+int main(int argc, const char *argv[])
+{
+	int i;
+
+	for (i=0; i < argc; i++)
+	{
+		printf("%s\n", argv[i]);
+	}
+		return (0);
+}
