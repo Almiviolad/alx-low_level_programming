@@ -8,7 +8,7 @@ s
  */
 int main(int argc, const char *argv[])
 {
-        (void)argv;
-        printf("%d\nn", argc - 1);
-        return (0);
+	(void)argv;
+	printf("%i\n", argc - 1);
+	return (0);
 }
