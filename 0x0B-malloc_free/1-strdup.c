@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *_strdup - create an array with str
-
+*_strdup - create an array with str
 *@str: the pointer to the array
 *Return: array pointer
 */
