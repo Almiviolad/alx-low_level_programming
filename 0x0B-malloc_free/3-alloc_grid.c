@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
+#include <limits.h>
 /**
  **alloc_grid- concatenate two string
  *@width: obviously the width of tthe 2d array
@@ -12,6 +14,8 @@ int **alloc_grid(int width, int height)
 	int **grid;
 
 	if (width <= 0 || height <= 0)
+		return (NULL);
+	if (width > INT_MAX || height > INT_MAX)
 		return (NULL);
 	grid = malloc(height * sizeof(int));
 	if (grid == NULL)
@@ -27,8 +31,9 @@ int **alloc_grid(int width, int height)
 			for ( ; h <= 0; h--)
 			{
 				free(grid[h]);
-				free(grid);
 			}
+			free(grid);
+			return (NULL);
 		}
 	}
 	for (h = 0; h < height; h++)
