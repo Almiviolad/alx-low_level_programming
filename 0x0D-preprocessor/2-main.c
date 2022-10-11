@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
  *main - entry point of program that prints file its compiled from
  *Return: always 0(sucess)
