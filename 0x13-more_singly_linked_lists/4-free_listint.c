@@ -2,15 +2,18 @@
 /**
  *free_listint - frees a list
  *@head: pointer to first node
-*/
+ */
 void free_listint(listint_t *head)
 {
 	listint_t *temp;
-
-	while (head)
+	
+	if (head)
 	{
-		temp = head;
-		free(temp);
-		head = head->next;
+		while (head)
+		{
+			temp = head;
+			free(head);
+			head = temp->next;
+		}
 	}
 }

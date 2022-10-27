@@ -1,40 +1,49 @@
+#include <stdlib.h>
 #include "lists.h"
+
 /**
- *insert_nodeint_at_index - inserts node at index
- *@head:pointer to first node
- *@idx:given index
- *@n:value of the node
- *Return: the node or Null if it fails
+ * insert_nodeint_at_index - inserts a new node at a given position
+ * @head: double pointer to the head of the listint_t linked list
+ * @idx: the index of the list where the new node should be added
+ * @n: element/property n of the node to be added
+ * Return: address of the new element (SUCCESS), or
+ * NULL if it failed (FAILURE), or
+ * NULL if is not possible to add the new node at index @idx
  */
+
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *new, *node_b4_idx, *node_after_idx;
-	unsigned int count;
+	unsigned int i = 0;
+	listint_t *current_node = *head, *new_node_ptr;
 
-	count = 0;
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
+	if (idx == 0)
 	{
-		free(new);
-		return (NULL);
+		new_node_ptr = malloc(sizeof(listint_t));
+
+		if (!new_node_ptr)
+			return (NULL);
+		new_node_ptr->n = n;
+		new_node_ptr->next = *head;
+		*head = new_node_ptr;
+		return (new_node_ptr);
 	}
-	node_b4_idx = *head;
-	for (count = 0; head && count < idx - 1; count++)
+
+	while (current_node && ((i + 1) != idx))
 	{
-		node_b4_idx = node_b4_idx->next;
+		current_node = current_node->next;
+		i++;
 	}
-	node_after_idx = *head;
-	for (count = 0; head && count < idx; count++)
+
+	if ((i + 1) == idx)
 	{
-		node_after_idx = node_after_idx->next;
+		new_node_ptr = malloc(sizeof(listint_t));
+
+		if (!new_node_ptr)
+			return (NULL);
+		new_node_ptr->n = n;
+		new_node_ptr->next = current_node->next;
+		current_node->next = new_node_ptr;
+		return (new_node_ptr);
 	}
-	if (count < idx)
-	{
-		free(new);
-		return (NULL);
-	}
-	new->n = n;
-	new->next = node_after_idx;
-	node_b4_idx->next = new;
-	return (*head);
+	return (NULL);
 }

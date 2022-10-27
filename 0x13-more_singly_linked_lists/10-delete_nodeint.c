@@ -1,43 +1,46 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "lists.h"
+
 /**
- *delete_nodeint_at_index - delee the node at index
- *@head: pointer to the first node
- *@index:given index
- *Return: 1(sucess) or-1(fail)
+ * delete_nodeint_at_index - deletes the node at a given index
+ * of a listint_t linked list
+ * @head: double pointer to the head of the listint_t linked list
+ * @index: the index of the node that should be deleted
+ * Return: 1 if it succeeded, or
+ * -1 if it failed
  */
+
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *node, *node_b4_index, *node_after_index;
-	unsigned int count, no_of_nodes_b4_del, no_of_nodes_after_del;
+	unsigned int i = 0;
+	listint_t *current_node = *head, *temp;
 
-	if (!*head)
+	if (!current_node)
 		return (-1);
-	node = *head;
-	for (count = 0; node; count++)
+
+	if (index == 0)
 	{
-		node = node->next;
+		*head = current_node->next;
+		free(current_node);
+
+		return (1);
 	}
-	no_of_nodes_b4_del = count;
-	node = *head;
-	for (count = 0; node &&  count < index; count++)
+
+	while (current_node->next && ((i + 1) != index))
 	{
-		node = node->next;
+		current_node = current_node->next;
+		i++;
 	}
-	node_b4_index = *head;
-	for (count = 0; node && count < index - 1; count++)
+
+	if ((i + 1) == index && current_node->next)
 	{
-		node_b4_index = node_b4_index->next;
+		temp = current_node->next;
+		current_node->next = temp->next;
+		free(temp);
+
+		return (1);
 	}
-	node_after_index = node->next;
-	node_b4_index->next = node_after_index;
-	free(node);
-	node = *head;
-	for (count = 0; node; count++)
-	{
-		node = node->next;
-	}
-	no_of_nodes_after_del = count;
-	if (no_of_nodes_b4_del != no_of_nodes_after_del - 1)
-		return (-1);
-	return (1);
+
+	return (-1);
 }
