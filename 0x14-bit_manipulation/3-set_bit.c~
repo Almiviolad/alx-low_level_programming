@@ -1,0 +1,24 @@
+/**
+*set_bit - set bit at index to 1
+*@n: number to change to bits
+*@index: position of the bits
+*Return: 1(success) or -1(fail)
+*/
+int set_bit(unsigned long int *n, unsigned int index)
+{
+	int bit, bit_value;
+
+		bit = (*n >> index);
+		bit_value = bit & 1;
+		if (index > 64)
+			return (-1);
+		if (bit_value == 0)
+		{
+			bit++;
+			bit_value = bit & 1;
+		}
+		*n = bit << index;
+		return (1);
+	}
+	return (-1);
+}
