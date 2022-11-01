@@ -28,8 +28,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(c);
 		return (0);
 	}
-	wr = write(STDOUT_FILENO, c, letters);
-	if (wr < 0 || wr != (int) letters)
+	wr = write(STDOUT_FILENO, c, size);
+	if (wr < 0 || wr != size)
 	{
 		free(c);
 		return (0);
