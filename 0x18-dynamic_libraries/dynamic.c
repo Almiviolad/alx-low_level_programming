@@ -4,9 +4,9 @@
  * Return: always 1
  */
 
-int _putchar(char c)
+int _putchar(__attribute__((unused)) char c)
 {
-return (1);
+
 }
 /**
  * _islower - prints char
@@ -14,9 +14,9 @@ return (1);
  * Return: always 1
  */
 
-int _islower(int c)
+int _islower(__attribute__((unused)) int c)
 {
-return (1);
+
 }
 /**
  * _isalpha - prints char
@@ -24,9 +24,9 @@ return (1);
  * Return: always 1
  */
 
-int _isalpha(int c)
+int _isalpha(__attribute__((unused)) int c)
 {
-return (1);
+
 }
 /**
  * _abs - prints char
@@ -34,9 +34,9 @@ return (1);
  * Return: always 1
  */
 
-int _abs(int n)
+int _abs(__attribute__((unused)) int n)
 {
-return (1);
+
 }
 /**
  * _isupper - prints char
@@ -44,9 +44,9 @@ return (1);
  * Return: always 1
  */
 
-int _isupper(int c)
+int _isupper(__attribute__((unused)) int c)
 {
-return (1);
+
 }
 /**
  * _isdigit - prints char
@@ -54,9 +54,9 @@ return (1);
  * Return: always 1
  */
 
-int _isdigit(int c)
+int _isdigit(__attribute__((unused)) int c)
 {
-return (1);
+
 }
 /**
  * _strlen - prints char
@@ -64,18 +64,18 @@ return (1);
  * Return: always 1
  */
 
-int _strlen(char *s)
+int _strlen(__attribute__((unused)) char *s)
 {
-return (1);
+
 }
 /**
  * _puts - prints char
  * @s: char to print
  * Return: always 1
  */
-void _puts(char *s)
+void _puts(__attribute__((unused)) char *s)
 {
-return (1);
+
 }
 /**
  * *_strcpy - prints char
@@ -84,9 +84,9 @@ return (1);
  * Return: always 1
  */
 
-char *_strcpy(char *dest, char *src)
+char *_strcpy(__attribute__((unused)) char *dest, __attribute__((unused)) char *src)
 {
-return (1);
+
 }
 /**
  * _atoi - prints char
@@ -94,9 +94,9 @@ return (1);
  * Return: always 1
  */
 
-int _atoi(char *s)
+int _atoi(__attribute__((unused)) char *s)
 {
-return (1);
+
 }
 /**
  * *_strcat - prints char
@@ -105,9 +105,9 @@ return (1);
  * Return: always 1
  */
 
-char *_strcat(char *dest, char *src)
+char *_strcat(__attribute__((unused)) char *dest, __attribute__((unused)) char *src)
 {
-return (1);
+
 }
 /**
  * *_strncat - prints char
@@ -117,9 +117,9 @@ return (1);
  * Return: always 1
  */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strncat(__attribute__((unused)) char *dest, __attribute__((unused)) char *src, __attribute__((unused)) int n)
 {
-return (1);
+
 }
 /**
  * *_strncpy - prints char
@@ -129,9 +129,9 @@ return (1);
  * Return: always 1
  */
 
-char *_strncpy(char *dest, char *src, int n)
+char *_strncpy(__attribute__((unused)) char *dest, __attribute__((unused)) char *src, __attribute__((unused)) int n)
 {
-return (1);
+
 }
 /**
  * _strcmp - prints char
@@ -140,9 +140,9 @@ return (1);
  * Return: always 1
  */
 
-int _strcmp(char *s1, char *s2)
+int _strcmp(__attribute__((unused)) char *s1, __attribute__((unused)) char *s2)
 {
-return (1);
+
 }
 /**
  * *_memset - prints char
@@ -150,9 +150,10 @@ return (1);
  * @b: char to print
  * @n: something
  * Return: always 1
-char *_memset(char *s, char b, unsigned int n)
+ */
+char *_memset(__attribute__((unused)) char *s, __attribute__((unused)) char b, __attribute__((unused)) unsigned int n)
 {
-return (1);
+
 }
 /**
  * *_memcpy - prints char
@@ -162,9 +163,9 @@ return (1);
  * Return: always 1
  */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_memcpy(__attribute__((unused)) char *dest, __attribute__((unused)) char *src, __attribute__((unused)) unsigned int n)
 {
-return (1);
+
 }
 /**
  * *_strchr - prints char
@@ -173,9 +174,9 @@ return (1);
  * Return: always 1
  */
 
-char *_strchr(char *s, char c)
+char *_strchr(__attribute__((unused)) char *s, __attribute__((unused)) char c)
 {
-return (1);
+
 }
 /**
  * _strspn - prints char
@@ -184,9 +185,9 @@ return (1);
  * Return: always 1
  */
 
-unsigned int _strspn(char *s, char *accept)
+unsigned int _strspn(__attribute__((unused)) char *s, __attribute__((unused)) char *accept)
 {
-return (1);
+
 }
 /**
  * *_strpbrk - prints char
@@ -195,9 +196,9 @@ return (1);
  * Return: always 1
  */
 
-char *_strpbrk(char *s, char *accept)
+char *_strpbrk(__attribute__((unused)) char *s, __attribute__((unused)) char *accept)
 {
-return (1);
+
 }
 /**
  * *_strstr - prints char
@@ -206,7 +207,7 @@ return (1);
  * Return: always 1
  */
 
-char *_strstr(char *haystack, char *needle)
+char *_strstr(__attribute__((unused)) char *haystack, __attribute__((unused)) char *needle)
 {
-return (1);
+
 }
