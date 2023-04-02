@@ -34,8 +34,6 @@ def island_perimeter(grid):
                 if j < breadth-1:
                     if grid[i][j + 1] == 0:
                         perimeter = perimeter + 1
-                        # move to next line if next element is 0
-                        break
                 # add 1 to perimeter if its the last element in the row
                 else:
                     perimeter = perimeter + 1
