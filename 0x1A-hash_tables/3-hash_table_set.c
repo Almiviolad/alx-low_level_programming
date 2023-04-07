@@ -23,6 +23,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	strcpy(hash_node->key, key);
 	strcpy(hash_node->value, value);
 	index = key_index((const unsigned char *)key, ht->size);
-	ht->array[index] = hash_node;
+	if (ht->array[index] == NULL)
+	{
+		ht->array[index] = hash_node;
+	}
+	else
+	{
+		if (ht->array[index]->key == hash_node->key)
+			ht->array[index]->value = hash_node->value;
+		else
+		{
+		hash_node->next = ht->array[index];
+		ht->array[index] = hash_node;
+		}
+	}
 	return (1);
 }
