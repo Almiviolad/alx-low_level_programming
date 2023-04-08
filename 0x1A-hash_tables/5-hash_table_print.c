@@ -22,15 +22,10 @@ void hash_table_print(const hash_table_t *ht)
 				printf(", ");
 			seen = 1;
 			printf("'%s': '%s'", ht->array[i]->key, ht->array[i]->value);
-			if (ht->array[i]->next != NULL)
-			{
-				current = ht->array[i]->next;
-				while (current != NULL)
-				{
-					printf(", '%s': '%s'", current->key, current->value);
-					current = current->next;
-				}
-				printf("'%s': '%s'", current->key, current->value);
+			current = ht->array[i]->next;
+			while (current != NULL)
+			{				printf(", '%s': '%s'", current->key, current->value);
+				current = current->next;
 			}
 		}
 	}
