@@ -16,14 +16,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	current = ht->array[index];
 	if (current == NULL)
 		return (NULL);
-	if (strcmp(current->key, key) == 0)
-		return (current->value);
-	while (current->next)
+	while (current->next || current)
 	{
 		if (strcmp(current->key, key) == 0)
 			return (current->value);
 		current = current->next;
 	}
-
 	return (NULL);
 }
