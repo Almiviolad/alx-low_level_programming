@@ -30,7 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else
 	{
 		if (ht->array[index]->key == hash_node->key)
-			ht->array[index]->value = hash_node->value;
+			ht->array[index] = hash_node;
 		else
 		{
 		hash_node->next = ht->array[index];
