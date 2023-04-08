@@ -29,7 +29,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		if (ht->array[index]->key == hash_node->key)
+		if (strcmp(ht->array[index]->key, hash_node->key) == 0)
 			ht->array[index] = hash_node;
 		else
 		{
