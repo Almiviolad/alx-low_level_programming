@@ -10,26 +10,32 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	int mid, i;
 
-	if (size < 1 || !array)
+	if (!array)
 		return (-1);
-	mid = size/2;
 	i = 0;
 	printf("Searching in array: ");
-	while (array[i] && i < (int)size)
+	while (i < (int)size)
 	{
-		if (array[i++])
+		if (i != (int)size - 1)
 			printf("%d, ", array[i]);
 		else
-			printf("%d", array[i]);
+			printf("%d\n", array[i]);
 		i++;
 	}
-	if (array[mid] == value)
-		return mid;
+	if (size == 1 && array[0] != value)
+		return (-1);
+	mid = (size - 1) / 2;
+	if (array[mid] == value && array[mid - 1] != value)
+		return (mid);
 	else if (array[mid] < value)
 	{
-		size = size - mid - 1;
-		return advanced_binary(&array[mid + 1], size, value);
+		int func = advanced_binary(&array[mid + 1], size - mid - 1, value);
+
+		if (func == -1)
+			return (-1);
+		else
+			return (mid + func + 1);
 	}
 	else
-		return advanced_binary(array, mid - 1, value);
+		return (advanced_binary(array, mid + 1, value));
 }
